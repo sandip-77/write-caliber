@@ -90,7 +90,8 @@
                 </div>
                 <p class="text-center selcted_option_text" id="option_text_product"></p>
 
-                <div class="d-flex justify-content-center next_btn_div">
+                <div class="d-flex justify-content-around next_btn_div">
+                    <button type="button" id="back-1" class="button_next disable_btn" disabled><i class="bi bi-arrow-left p-1"></i> Back</i></button>
                     <button type="button" id="next-1" class="button_next disable_btn" disabled>Next <i class="bi bi-arrow-right p-1"></i></button>
                 </div>
             </div>
@@ -104,7 +105,8 @@
                     </select>
                 </div>
                 <p class="text-center selcted_option_text" id="option_text_freq"></p>
-                <div class="d-flex justify-content-center next_btn_div">
+                <div class="d-flex justify-content-around next_btn_div">
+                    <button type="button"  id="back-2" class="button_next"><i class="bi bi-arrow-left p-1"></i> Back</i></button>
                     <button type="button"  id="next-2" class="button_next disable_btn" disabled>Next <i class="bi bi-arrow-right p-1"></i></button>
                 </div>
             </div>
@@ -114,8 +116,9 @@
                    <input onkeyup="email_validate();" id='subscribe_input' placeholder="Enter email and start free trial" type="email" class="subscribe_email">
                 </div>
 
-                <div class="d-flex justify-content-center next_btn_div">
+                <div class="d-flex flex-column align-items-center next_btn_div">
                     <button type="submit" id="subscribe_btn" class="button_subscribe disable_btn" disabled>Subscribe</button>
+                    <button type="button" id="subscribe_btn_back" class="button_subscribe_back ">Back</button>
                 </div>
             </div>
         </div>
@@ -158,7 +161,8 @@
                     </div>
                     <p class="text-center selcted_option_text" id="option_text_product_2.0"></p>
     
-                    <div class="d-flex justify-content-center next_btn_div">
+                    <div class="d-flex justify-content-around next_btn_div">
+                        <button type="button" id="back-1-2.0" class="button_next disable_btn" disabled> <i class="bi bi-arrow-left p-1"></i> Back</button>
                         <button type="button" id="next-1-2.0" class="button_next disable_btn" disabled>Next <i class="bi bi-arrow-right p-1"></i></button>
                     </div>
                 </div>
@@ -172,7 +176,8 @@
                         </select>
                     </div>
                     <p class="text-center selcted_option_text" id="option_text_freq_2.0"></p>
-                    <div class="d-flex justify-content-center next_btn_div">
+                    <div class="d-flex justify-content-around next_btn_div">
+                        <button type="button" id="back-2-2.0" class="button_next"> <i class="bi bi-arrow-left p-1"></i>Back</i></button>
                         <button type="button" id="next-2-2.0" class="button_next disable_btn" disabled>Next <i class="bi bi-arrow-right p-1"></i></button>
                     </div>
                 </div>
@@ -183,8 +188,9 @@
                        <input onkeyup="email_validate2();" placeholder="Enter email and start free trial" type="email" id="subscribe_input_2.0" class="subscribe_email">
                     </div>
     
-                    <div class="d-flex justify-content-center next_btn_div">
+                    <div class="d-flex flex-column align-items-center next_btn_div">
                         <button type="submit" id="subscribe_btn_2.0" class="button_subscribe disable_btn" disabled>Subscribe</button>
+                        <button type="button" id="subscribe_btn_back_2.0" class="button_subscribe_back">Back</button>
                     </div>
                 </div>
 
@@ -423,17 +429,21 @@
 
     let next_btn1 = document.getElementById('next-1');
     let next_btn2 = document.getElementById('next-2');
+    // let back_btn1 = document.getElementById('back-1');
+    let back_btn2 = document.getElementById('back-2');
     let porduct_option = document.getElementById('product');
     let freq_option = document.getElementById('freq');
     let subscribe = document.getElementById('subscribe');
     let email_input = document.getElementById('subscribe_input');
     let subscribe_btn = document.getElementById('subscribe_btn');
+    let subscribe_btn_back = document.getElementById('subscribe_btn_back');
 
 
     let freq_selection = document.getElementById("frequency_options");
     let option_text_product = document.getElementById('option_text_product');
 
     next_btn1.addEventListener("click", function(){
+        porduct_option.classList.remove("show_selectmenu");
         porduct_option.classList.add("hide_selectmenu");
         freq_option.classList.remove("hide_selectmenu")
         freq_option.classList.add("show_selectmenu")
@@ -445,6 +455,23 @@
         subscribe.classList.remove("hide_selectmenu")
         subscribe.classList.add("show_selectmenu")
     });
+
+    back_btn2.addEventListener("click", function(){
+        console.log('fuck');
+        porduct_option.classList.remove("hide_selectmenu");
+        porduct_option.classList.add("show_selectmenu");
+        freq_option.classList.remove("show_selectmenu")
+        freq_option.classList.add("hide_selectmenu")
+
+    });
+
+    subscribe_btn_back.addEventListener("click", function(){
+        freq_option.classList.add("show_selectmenu")
+        freq_option.classList.remove("hide_selectmenu")
+        subscribe.classList.add("hide_selectmenu")
+        subscribe.classList.remove("show_selectmenu")
+    })
+
 
     const middle_east = "A full coverage of the banking sector in the Middle East. Receive all the latest news and analysis about banks, banking technology, latest financing deals, central bank regulations, fintech and regtech innovation, etc…";
     const gcc = "A full coverage of all listed companies in the GCC region. Track your portfolio companies and make sure to stay up to date with their news, analysis, interviews, products launches, wins, of every listed company in all GCC exchanges."
@@ -514,17 +541,21 @@
 
     let next_btn1_2 = document.getElementById('next-1-2.0');
     let next_btn2_2 = document.getElementById('next-2-2.0');
+    let back_btn2_2 = document.getElementById('back-2-2.0');
     let porduct_option_2 = document.getElementById('product_2.0');
     let freq_option_2 = document.getElementById('freq_2.0');
     let subscribe_2 = document.getElementById('subscribe_2.0');
     let email_input_2 = document.getElementById('subscribe_input_2.0');
     let subscribe_btn_2 = document.getElementById('subscribe_btn_2.0');
+    let subscribe_btn_back_2 = document.getElementById('subscribe_btn_back_2.0');
+
 
     let freq_selection_2 = document.getElementById("frequency_options_2.0");
     let option_text_product_2 = document.getElementById('option_text_product_2.0');
 
     next_btn1_2.addEventListener("click", function(){
         console.log("clicked");
+        porduct_option_2.classList.remove("show_selectmenu");
         porduct_option_2.classList.add("hide_selectmenu");
         freq_option_2.classList.remove("hide_selectmenu")
         freq_option_2.classList.add("show_selectmenu")
@@ -536,6 +567,22 @@
         subscribe_2.classList.remove("hide_selectmenu")
         subscribe_2.classList.add("show_selectmenu")
     });
+
+    back_btn2_2.addEventListener("click", function(){
+        console.log('fuck');
+        porduct_option_2.classList.remove("hide_selectmenu");
+        porduct_option_2.classList.add("show_selectmenu");
+        freq_option_2.classList.remove("show_selectmenu")
+        freq_option_2.classList.add("hide_selectmenu")
+
+    });
+
+    subscribe_btn_back_2.addEventListener("click", function(){
+        freq_option_2.classList.add("show_selectmenu")
+        freq_option_2.classList.remove("hide_selectmenu")
+        subscribe_2.classList.add("hide_selectmenu")
+        subscribe_2.classList.remove("show_selectmenu")
+    })
 
     function update_product_2(){
 
