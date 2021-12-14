@@ -9,8 +9,48 @@ p, h1, h2, h3, h4, h5, h6, span{
     padding: 0;
     box-sizing: border-box;
 }
+/* navabr */
+.navbar-hamb{
+    background-color: #0072ce;
+    z-index: 99;
+    color: white;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+.link{
+    color: white !important;
+    padding: 23px;
+    margin: 0 10px;
+    transition: all 0.4s;
+
+}
+
+.login-link{
+    display: none;
+}
 
 
+
+.logo-img-desktop{
+    padding: 20px  0;
+}
+
+.logo-img-mobile{
+    display: none;
+    padding: 20px  0;
+}
+
+.navbar-toggler{
+    border-color: rgba(255,255,255,.5) !important;
+}
+
+.navbar-toggler:active{
+    outline: none !important;
+}
+
+.link:hover{
+    background-color: black;
+}
 /* Heading */
 
 .top_section{
@@ -34,6 +74,8 @@ line-height: 35px;
 .yt_video{
     width: 69%;
     height: 260px;
+    border-radius: 25px !important;
+
 }
 
 .top_text_and_yt{
@@ -71,6 +113,10 @@ line-height: 35px;
     border: none;
 }
 
+.disable_btn{
+    opacity: 50%;
+}
+
 .next_btn_div{
     margin-top: 7vh;
 }
@@ -103,6 +149,10 @@ line-height: 35px;
 }
 
 /* mid section starts */
+
+.middle_text_area{
+    margin-bottom: 15vh;
+}
 .mid_texts{
     font-size: 18px;
     font-weight: 400;
@@ -247,11 +297,17 @@ line-height: 35px;
     margin-bottom: 20vh;
 }
 
+.mobile-version-faq{
+    display: none;
+}
+
+
+
 .faq .title{
     font-weight: 600;
     font-size: 36px;
     line-height: 60px;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
 }
 
 .faq .question{
@@ -293,7 +349,51 @@ color: #FFFFFF;
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 479px){
+
+    .login-link{
+        display: block;
+    }
+
+    .logo-img-desktop{
+        display: none !important;
+    }
+    
+    .logo-img-mobile{
+        display: flex !important;
+        padding: 20px  0;
+    }
+
+    .login-link{
+        font-size: 16px;
+        line-height: 24px;
+        text-transform: uppercase;
+        color: white !important;
+        padding: 15px ;
+    }
+
+    .link-hide-switch{
+        display: none;
+    }
+
+    .link{
+        color: white !important;
+        padding: 10px !important;
+        margin: 5px !important;
+    }
     .heading {
         font-size: 30px;
         line-height: 35px;
@@ -426,6 +526,22 @@ color: #FFFFFF;
         
     }
 
+    .faq .title{
+        display: none;
+    }
+    
+    .mobile-version-faq{
+        display: flex;
+        justify-content: center;
+    }
+
+    .desktop-version-faq{
+        display: none;
+    }
+    .mobile-version-faq img{
+        width: 100px;
+        margin-bottom: 60px;
+    }
     
 
 

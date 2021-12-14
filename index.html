@@ -15,7 +15,32 @@
 </head>
 <body>
     <!-- Navbar starts -->
+    <div class="container">
+        <div class="logo-img-desktop">
+            <img src="images/logo_desktop1.png" alt="logo-img">
+        </div>
 
+        <div class="logo-img-mobile justify-content-center">
+            <img src="images/logo_mobile.png" alt="">
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light navbar-hamb">
+        <div class="container-fluid">
+          <a class="navbar-brand login-link" href="https://news.writecaliber.com/register/">Login</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-list text-white"></i>
+          </button>
+          <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link link" aria-current="page" href="https://news.writecaliber.com/">HOME</a>
+              <a class="nav-link link" href="https://news.writecaliber.com/our-services/">OUR CHANNELS</a>
+              <a class="nav-link link link-hide-switch" href="https://news.writecaliber.com/register/">LOGIN</a>
+              <a class="nav-link link" href="https://news.writecaliber.com/advertise-with-us/">ADVERTISE WITH US</a>
+              <a class="nav-link link" href="https://news.writecaliber.com/about-us/">ABOUT US</a>
+            </div>
+          </div>
+        </div>
+      </nav>
     <!-- Navbare ends -->
 
     <section class='mb-5 position-relative top_section' id="top_section">
@@ -66,31 +91,31 @@
                 <p class="text-center selcted_option_text" id="option_text_product"></p>
 
                 <div class="d-flex justify-content-center next_btn_div">
-                    <button type="button" id="next-1" class="button_next">Next <i class="bi bi-arrow-right p-1"></i></button>
+                    <button type="button" id="next-1" class="button_next disable_btn" disabled>Next <i class="bi bi-arrow-right p-1"></i></button>
                 </div>
             </div>
             <!-- step 2 -->
             <div class="hide_selectmenu" id="freq">
                 <div class="mb-5 d-flex justify-content-center">
-                    <select  class="form-select select_menu p-3" id="freq_options" aria-label="Default select example">
+                    <select onchange="update_freq1();"  class="form-select select_menu p-3" id="freq_options" aria-label="Default select example">
                         <option selected>Choose frequency</option>
-                        <option value="Once a day">Middle East Banking Channel                     </option>
-                        <option value="Once a week">GCC Financial News</option>
+                        <option value="Once a day">Once a day</option>
+                        <option value="Once a week">Once a week</option>
                     </select>
                 </div>
                 <p class="text-center selcted_option_text" id="option_text_freq"></p>
                 <div class="d-flex justify-content-center next_btn_div">
-                    <button type="button" id="next-2" class="button_next">Next <i class="bi bi-arrow-right p-1"></i></button>
+                    <button type="button"  id="next-2" class="button_next disable_btn" disabled>Next <i class="bi bi-arrow-right p-1"></i></button>
                 </div>
             </div>
             <!-- step 3 -->
             <div id="subscribe" class="hide_selectmenu">
                 <div class="mb-5 d-flex justify-content-center">
-                   <input placeholder="Enter email and start free trial" type="email" class="subscribe_email">
+                   <input onkeyup="email_validate();" id='subscribe_input' placeholder="Enter email and start free trial" type="email" class="subscribe_email">
                 </div>
 
                 <div class="d-flex justify-content-center next_btn_div">
-                    <button type="button" id="subscribe_btn" class="button_subscribe">Subscribe</button>
+                    <button type="submit" id="subscribe_btn" class="button_subscribe disable_btn" disabled>Subscribe</button>
                 </div>
             </div>
         </div>
@@ -99,7 +124,7 @@
 
 .
     <!-- Middle text serction starts-->
-    <section id="middle_text_area">
+    <section class="middle_text_area" id="middle_text_area">
         <div class="container">
             <div class="container mid_texts">
                 <p class="mb-2 para"><span class="bold_text">News articles are</span> the main source of credible information, constantly offering new opportunities and highlighting risks. Without industry news and market information, businesses can become irrelevant: news about clients, competitors, a technology breakthrough, a new law or regulation, etc.</p>
@@ -111,12 +136,61 @@
                 <p class="text-center service_desc_title">All you need is to check one single email a day</p>
                 <p class="text-center service_desc_subtitle">We go through thousands of articles to send you what is truly relevant to your business. The news that you <span class="fw-bold">DON’T WANT </span>to miss</p>
                 <div class="d-flex justify-content-center pt-5">
-                     <img class="img-fluid" src="images/image_1.png" alt="image">
+                     <img class="img-fluid" src="images/gif.gif" alt="image">
                 </div>
             </div>
         </div>
     </section>
     <!-- Middle text serction ends-->
+
+            <section class="second_form">
+
+                <div class="container">
+    
+                <!-- step1 -->
+                <div id="product_2.0">
+                    <div class="mb-5 d-flex justify-content-center">
+                        <select onchange="update_product_2();" class="form-select select_menu p-3" id="product_options_2.0" aria-label="Default select example">
+                            <option>Choose a product</option>
+                            <option value="Middle East Banking Channel">Middle East Banking Channel</option>
+                            <option value="GCC Financial News">GCC Financial News</option>
+                        </select>
+                    </div>
+                    <p class="text-center selcted_option_text" id="option_text_product_2.0"></p>
+    
+                    <div class="d-flex justify-content-center next_btn_div">
+                        <button type="button" id="next-1-2.0" class="button_next disable_btn" disabled>Next <i class="bi bi-arrow-right p-1"></i></button>
+                    </div>
+                </div>
+                <!-- step 2 -->
+                <div class="hide_selectmenu" id="freq_2.0">
+                    <div class="mb-5 d-flex justify-content-center">
+                        <select onchange="update_freq2();"  class="form-select select_menu p-3" id="freq_options_2.0" aria-label="Default select example">
+                            <option selected>Choose frequency</option>
+                            <option value="Once a day">Once a day</option>
+                            <option value="Once a week">Once a week</option>
+                        </select>
+                    </div>
+                    <p class="text-center selcted_option_text" id="option_text_freq_2.0"></p>
+                    <div class="d-flex justify-content-center next_btn_div">
+                        <button type="button" id="next-2-2.0" class="button_next disable_btn" disabled>Next <i class="bi bi-arrow-right p-1"></i></button>
+                    </div>
+                </div>
+                <!-- step 3 -->
+    
+                <div id="subscribe_2.0" class="hide_selectmenu">
+                    <div class="mb-5 d-flex justify-content-center">
+                       <input onkeyup="email_validate2();" placeholder="Enter email and start free trial" type="email" id="subscribe_input_2.0" class="subscribe_email">
+                    </div>
+    
+                    <div class="d-flex justify-content-center next_btn_div">
+                        <button type="submit" id="subscribe_btn_2.0" class="button_subscribe disable_btn" disabled>Subscribe</button>
+                    </div>
+                </div>
+
+            </div>
+
+            </section>
 
 
     <!-- Banner Section starts -->
@@ -197,46 +271,6 @@
                         </div>
                     </div>
 
-                <!-- step1 -->
-            <div id="product_2.0">
-                <div class="mb-5 d-flex justify-content-center">
-                    <select onchange="update_product_2();" class="form-select select_menu p-3" id="product_options_2.0" aria-label="Default select example">
-                        <option>Choose a product</option>
-                        <option value="Middle East Banking Channel">Middle East Banking Channel</option>
-                        <option value="GCC Financial News">GCC Financial News</option>
-                    </select>
-                </div>
-                <p class="text-center selcted_option_text" id="option_text_product_2.0"></p>
-
-                <div class="d-flex justify-content-center next_btn_div">
-                    <button type="button" id="next-1-2.0" class="button_next">Next <i class="bi bi-arrow-right p-1"></i></button>
-                </div>
-            </div>
-            <!-- step 2 -->
-            <div class="hide_selectmenu" id="freq_2.0">
-                <div class="mb-5 d-flex justify-content-center">
-                    <select  class="form-select select_menu p-3" id="freq_options_2.0" aria-label="Default select example">
-                        <option selected>Choose frequency</option>
-                        <option value="Once a day">Middle East Banking Channel                     </option>
-                        <option value="Once a week">GCC Financial News</option>
-                    </select>
-                </div>
-                <p class="text-center selcted_option_text" id="option_text_freq_2.0"></p>
-                <div class="d-flex justify-content-center next_btn_div">
-                    <button type="button" id="next-2-2.0" class="button_next">Next <i class="bi bi-arrow-right p-1"></i></button>
-                </div>
-            </div>
-            <!-- step 3 -->
-
-            <div id="subscribe_2.0" class="hide_selectmenu">
-                <div class="mb-5 d-flex justify-content-center">
-                   <input placeholder="Enter email and start free trial" type="email" class="subscribe_email">
-                </div>
-
-                <div class="d-flex justify-content-center next_btn_div">
-                    <button type="button" id="subscribe_btn_2.0" class="button_subscribe">Subscribe</button>
-                </div>
-            </div>
 
                 <!-- carousel section starts-->
                 <div id="carouselExampleControls" class="carousel slide d-flex justify-content-center mt-5" data-bs-ride="carousel">
@@ -296,6 +330,9 @@
                     
                 <div class="container">
                     <p class="text-center title">FAQs</p>
+                    <div class="mobile-version-faq">
+                        <img src="images/faq.png" alt="">
+                    </div>
                     <div class="row">
                     <div class="col-md-8">
                         <div class="faq_question_and_answer">
@@ -346,7 +383,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 desktop-version-faq">
                         <img src="images/faq.png" alt="">
                     </div>
                 </div>
@@ -389,6 +426,9 @@
     let porduct_option = document.getElementById('product');
     let freq_option = document.getElementById('freq');
     let subscribe = document.getElementById('subscribe');
+    let email_input = document.getElementById('subscribe_input');
+    let subscribe_btn = document.getElementById('subscribe_btn');
+
 
     let freq_selection = document.getElementById("frequency_options");
     let option_text_product = document.getElementById('option_text_product');
@@ -412,6 +452,20 @@
             var product_selection = document.getElementById('product_options');
             var product = product_selection.options[product_selection.selectedIndex].value;
             console.log(product);
+            option_text_product.innerHTML = "";
+
+            // button disability
+            next_btn1.classList.add("disable_btn");
+            if(product == "GCC Financial News" || product == "Middle East Banking Channel"){
+                next_btn1.disabled = false;
+                next_btn1.classList.remove("disable_btn");
+            } else if(product == "Choose a product") {
+                next_btn1.disabled = true;
+                next_btn1.classList.add("disable_btn");
+
+            }
+
+
             if(product == "GCC Financial News"){
                 option_text_product.innerHTML= gcc;
             } else if(product == "Middle East Banking Channel"){
@@ -419,8 +473,40 @@
             } else{
                 option_text_product.innerHTML = ""
             }
-            console.log(product);
 
+    }
+
+    function update_freq1 () {
+            var freq_selection = document.getElementById('freq_options');
+            var freqency = freq_selection.options[freq_selection.selectedIndex].value;
+            console.log(freqency);
+
+            // button disability
+            next_btn2.classList.add("disable_btn");
+            if(freqency == "Once a day" || freqency == "Once a week"){
+                next_btn2.disabled = false;
+                next_btn2.classList.remove("disable_btn");
+            } else {
+                next_btn2.disabled = true;
+                next_btn2.classList.add("disable_btn");
+
+            }
+    }
+
+
+
+    // validate email
+
+
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+    function email_validate () {
+        subscribe_btn.classList.add("disable_btn");
+        console.log('kjfns');
+        if(email_input.value.match(mailformat)){
+            subscribe_btn.disabled = false
+            subscribe_btn.classList.remove("disable_btn");
+        }
     }
 
 
@@ -431,6 +517,8 @@
     let porduct_option_2 = document.getElementById('product_2.0');
     let freq_option_2 = document.getElementById('freq_2.0');
     let subscribe_2 = document.getElementById('subscribe_2.0');
+    let email_input_2 = document.getElementById('subscribe_input_2.0');
+    let subscribe_btn_2 = document.getElementById('subscribe_btn_2.0');
 
     let freq_selection_2 = document.getElementById("frequency_options_2.0");
     let option_text_product_2 = document.getElementById('option_text_product_2.0');
@@ -450,23 +538,59 @@
     });
 
     function update_product_2(){
-            var product_selection = document.getElementById('product_options_2.0');
+
+        var product_selection = document.getElementById('product_options_2.0');
             var product = product_selection.options[product_selection.selectedIndex].value;
             console.log(product);
+            option_text_product.innerHTML = "";
+
+         // button disability
+         next_btn1_2.classList.add("disable_btn");
+            if(product == "GCC Financial News" || product == "Middle East Banking Channel"){
+                next_btn1_2.disabled = false;
+                next_btn1_2.classList.remove("disable_btn");
+            } else if(product == "Choose a product") {
+                next_btn1_2.disabled = true;
+                next_btn1_2.classList.add("disable_btn");
+
+            }
+            var product_selection = document.getElementById('product_options_2.0');
+            var product = product_selection.options[product_selection.selectedIndex].value;
             if(product == "GCC Financial News"){
                 option_text_product_2.innerHTML= gcc;
-            } else if(product == "Middle East Banking Channel"){
+            } else {
                 option_text_product_2.innerHTML= middle_east;
             }
-            console.log(product);
 
     }
 
-    const update_freq = () =>{
-            var freq_selection = document.getElementById('freq_options');
-            var freq = freq_selection.options[freq_selection.selectedIndex].value;
-            console.log(freq);
 
+    // freq
+    function update_freq2 () {
+            var freq_selection = document.getElementById('freq_options_2.0');
+            var freqency = freq_selection.options[freq_selection.selectedIndex].value;
+            console.log(freqency);
+
+            // button disability
+            next_btn2_2.classList.add("disable_btn");
+            if(freqency == "Once a day" || freqency == "Once a week"){
+                next_btn2_2.disabled = false;
+                next_btn2_2.classList.remove("disable_btn");
+            } else {
+                next_btn2_2.disabled = true;
+                next_btn2_2.classList.add("disable_btn");
+
+            }
+    }
+
+    // email
+
+    function email_validate2 () {
+        subscribe_btn_2.classList.add("disable_btn");
+        if(email_input_2.value.match(mailformat)){
+            subscribe_btn_2.disabled = false
+            subscribe_btn_2.classList.remove("disable_btn");
+        }
     }
 
 
