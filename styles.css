@@ -1,0 +1,448 @@
+body{
+    font-family: 'Poppins', sans-serif !important;
+    color: #061728;
+
+}
+
+p, h1, h2, h3, h4, h5, h6, span{
+    margin: 0 ;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Heading */
+
+.top_section{
+    padding-top: 10vh;
+    overflow-x: hidden;
+}
+
+.heading{
+    font-size: 45px;
+    line-height: 55px;
+    color: #0072CE;
+    font-weight: 700;
+    
+}
+
+.subtitle{
+    font-size: 24px;
+line-height: 35px;
+}
+
+.yt_video{
+    width: 69%;
+    height: 260px;
+}
+
+.top_text_and_yt{
+    margin-bottom: 10vh;
+}
+
+.top_section_wheel_svg{
+    top:30px
+}
+.top_section_circle_svg{
+    z-index: -1;
+    top: -20vh;
+    right: 10px;
+}
+
+
+
+.select_menu{
+    border: 2px solid #B7C3CB !important;
+    border-radius: 50px !important;
+    box-sizing: border-box !important;
+    width: 50%;
+}
+
+.form-select:focus{
+    outline: none !important;
+}
+
+.button_next{
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 30px;
+    color: #FE8928;
+    background-color: #fff;
+    border: none;
+}
+
+.next_btn_div{
+    margin-top: 7vh;
+}
+
+.hide_selectmenu{
+    display: none;
+}
+
+.show_selectmenu{
+    display: block;
+}
+
+.subscribe_email{
+    width: 50% !important;
+    border: 2px solid #B7C3CB;
+    padding: 15px;
+    border-radius: 50px;
+}
+
+.button_subscribe{
+    background: #FE8928;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 30px;
+    color: #FFFFFF;
+    border: none;
+    width: 50%;
+    padding: 15px;
+}
+
+/* mid section starts */
+.mid_texts{
+    font-size: 18px;
+    font-weight: 400;
+}
+.bold_text{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 33px;
+}
+
+.service_desc{
+    margin-top: 10vh;
+}
+
+.service_desc_title{
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 50px;
+}
+
+.service_desc_subtitle{
+    font-size: 18px;
+    line-height: 33px;
+    text-align: center;
+    margin-bottom: 15px;
+    padding: 0 19%;
+}
+
+.banner{
+    background: #0072CE;
+    color: white;
+    margin:10vh 0;
+    padding:55px 0;
+    position: relative;
+}
+
+.banner p{
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 60px;
+}
+
+.banner .less_bold{
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 40px;
+}
+
+.svg_wheel{
+    position: absolute;
+    top: -90px;
+}
+/* How its works */
+.how_it_works{
+    margin-bottom: 15vh;
+}
+.how_it_works .orange_ball{
+    width: 30px;
+    height: 30px;
+    background-color: #FE8928;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.how_it_works .orange_bar{
+    margin-left: -183px;
+    top:10px;
+    height: 10px;
+    width: 100%;
+    background-color:  rgba(254, 137, 40, 0.2);
+}
+
+.how_it_works .path{
+ flex-direction: column;
+ padding: 0 50px ;
+
+}
+.how_it_works .paths{
+    flex-direction: row;
+    margin-bottom: 10vh;
+   }
+
+.how_it_works .path p{
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 35px;
+}
+
+.how_it_works .title{
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 60px;
+    margin: 10vh 0;
+}
+
+.cta_form{
+    margin: 20vh 0 20vh 0;
+}
+
+.cta_button{
+    margin-bottom: 20vh ;
+
+}
+
+.carousel-inner-custom{
+    padding: 50px;
+    width: 60%;
+    background: #E5F2FB;
+    border-radius: 20px;
+    height: 35vh;
+}
+
+.carousel_slider{
+    padding:15px 19px;
+    border: 1px solid;
+    border-radius: 50%;
+}
+.title_carousel{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FE8928;
+    bottom: 10px;
+}
+
+.carousel-control-prev-custom, .carousel-control-next-custom{
+    bottom: 100px !important;
+    align-items: flex-end !important;
+
+}
+
+.how_it_works_wheel_svg{
+    right: 0;
+    top: 220px;
+}
+
+
+/* FAQ section */
+
+.faq{
+    margin-top: 5vh;
+    margin-bottom: 20vh;
+}
+
+.faq .title{
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 60px;
+    margin-bottom: 30px;
+}
+
+.faq .question{
+    font-weight: 600;
+    font-size: 20px;
+    padding-bottom: 30px;
+    line-height: 20px;
+}
+
+.faq .question:hover{
+    color:#0072CE !important;
+    cursor: pointer;
+}
+
+.faq .answer{
+    display: none;
+    padding-bottom: 20px;
+    
+}
+
+.faq .faq_svg{
+    z-index: -1;
+}
+
+.show{
+    display: block !important;
+}
+
+
+/* Footer */
+
+.footer{
+    background: #007BD4;
+    padding: 10px 0;
+    font-weight: 600;
+font-size: 20px;
+line-height: 55px;
+color: #FFFFFF;
+}
+
+
+@media only screen and (max-width: 479px){
+    .heading {
+        font-size: 30px;
+        line-height: 35px;
+        text-align: center;
+    }
+    .subtitle{
+        font-size: 16px;
+        line-height: 30px;
+        text-align: center;
+
+    }
+    .yt_video{
+    width: 100% !important;
+    height: 200px !important;
+
+    }
+    .top_section_circle_svg{
+        z-index: -1;
+        width: 173.01px;
+        height: 173.59px;
+        top: 33vh;
+        right: -13vw;
+    }
+    .select_menu{
+        width: 100% !important;
+    }
+    .service_desc_subtitle{
+        padding: 0 ;
+    }
+    
+    .service_desc_title{
+        line-height: 33px;
+        padding-bottom: 30px;
+    }
+    /* banner */
+
+    .banner p{
+        font-weight: 600;
+        font-size: 50px;
+        line-height: 50px;
+        padding-bottom: 40px;
+    }
+    
+    .banner .less_bold{
+        font-weight: 500;
+        font-size: 35px;
+        line-height: 40px;
+    }
+
+    /* how it works */
+
+
+    .how_it_works .title{
+        font-weight: 600;
+        font-size: 20px !important;
+        line-height: 25px !important;
+        margin-bottom: 20vh;
+        
+    }
+
+    .how_it_works .paths{
+        flex-direction: column !important;
+    }
+
+    .how_it_works .path{
+        flex-direction: row !important;
+        /* justify-content: center !important; */
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        /* padding-bottom: 80px; */
+        padding: 0 100px 80px 100px;
+    }
+
+    .how_it_works .path p{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        margin-left: 10px;
+    }
+
+    .how_it_works .orange_bar{
+        margin-top: -100px;
+        margin-left: 0px;
+
+        left:110px;
+        width: 10px;
+        height: 100%;
+        background-color:  rgba(254, 137, 40, 0.2);
+    }
+
+    .carousel-control-prev-custom, .carousel-control-next-custom{
+        position: unset !important;
+    }
+
+    .carousel-inner-custom{
+        padding: 30px;
+        width: 100%;
+        background: #E5F2FB;
+        border-radius: 20px;
+        height: 33vh;
+    }
+
+    .carousel_slider{
+        padding:6px 10px;
+        border: 1px solid;
+        border-radius: 50%;
+    }
+
+    .carousel_buttons{
+        display: flex;
+        justify-content: end;
+        margin-top: 10px;
+    }
+
+    /* faqs */
+    .faq .question{
+        font-weight: 600;
+        font-size: 16px;
+        /* line-height: 55px; */
+        /* identical to box height, or 344% */
+        
+        text-align: center;
+        
+        color: #75787B;
+    }
+
+    .faq .answer{
+        text-align: center;
+        
+    }
+
+    
+
+
+    .footer{
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 16px;
+        color: #FFFFFF;
+    }
+    .subscribe_email{
+        width: 100%!important;
+    }
+
+    .button_subscribe{
+        width: 100%;
+
+    }
+    
+
+}

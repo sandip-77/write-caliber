@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <title>Write Caliber</title>
+
+</head>
+<body>
+    <!-- Navbar starts -->
+
+    <!-- Navbare ends -->
+
+    <section class='mb-5 position-relative top_section' id="top_section">
+        <svg class="top_section_wheel_svg position-absolute" width="163" height="512" viewBox="0 0 163 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path opacity="0.15" fill-rule="evenodd" clip-rule="evenodd" d="M-317.295 172.481C-353.031 305.848 -276.489 451.318 -146.334 497.398C-16.1789 543.478 118.302 472.718 154.037 339.352C189.773 205.985 113.231 60.5152 -16.9243 14.4352C-147.079 -31.6448 -281.56 39.1149 -317.295 172.481ZM-221.283 206.474C-200.107 127.442 -120.414 85.5099 -43.2855 112.817C33.8433 140.123 79.2016 226.328 58.025 305.36C36.8485 384.392 -42.8438 426.323 -119.973 399.017C-197.101 371.71 -242.46 285.506 -221.283 206.474Z" fill="url(#paint0_linear_417_403)"/>
+            <defs>
+            <linearGradient id="paint0_linear_417_403" x1="-251.962" y1="-68.7776" x2="-417.876" y2="399.852" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#005EA1" stop-opacity="0.01"/>
+            <stop offset="1" stop-color="white"/>
+            </linearGradient>
+            </defs>
+        </svg>
+        <svg class="top_section_circle_svg position-absolute" width="418" height="509" viewBox="0 0 418 509" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g opacity="0.8">
+            <path d="M466.015 294.428C443.959 411.949 331.128 489.393 214.005 467.412C96.8826 445.431 19.8091 332.347 41.8649 214.826C63.9207 97.3049 176.752 19.861 293.874 41.842C410.997 63.823 488.07 176.907 466.015 294.428Z" stroke="#005EA1" stroke-opacity="0.05" stroke-width="2"/>
+            <circle cx="254.073" cy="253.917" r="179.648" transform="rotate(10.6294 254.073 253.917)" stroke="#005EA1" stroke-opacity="0.15" stroke-width="2"/>
+            <circle cx="254.073" cy="253.917" r="143.518" transform="rotate(10.6294 254.073 253.917)" stroke="#005EA1" stroke-opacity="0.22" stroke-width="2"/>
+            <circle cx="254.073" cy="253.917" r="107.389" transform="rotate(10.6294 254.073 253.917)" stroke="#005EA1" stroke-opacity="0.3" stroke-width="2"/>
+            <circle cx="254.073" cy="253.917" r="71.2591" transform="rotate(10.6294 254.073 253.917)" stroke="#005EA1" stroke-opacity="0.3" stroke-width="2"/>
+            </g>
+        </svg>
+            
+            
+        <div class="container overflow-hidden">
+            <div class="row gx-3 top_text_and_yt">
+                <div class="col-md-6 p-3">
+                    <div class='p-2'>
+                        <p class="heading">SIGN UP TO THE ONLY BUSINESS BRIEFING YOU NEED.</p>
+                        <p class="subtitle">Full coverage o your industry & your market in one daily email.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 p-3">
+                    <div class="w-embed-youtubevideo youtube d-flex justify-content-center position-relative">
+                        
+                        <iframe class='yt_video' src="https://www.youtube.com/embed/GRNUEu7ezgU?rel=0&amp;controls=0&amp;autoplay=0&amp;mute=0&amp;start=0" frameborder="0"  allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+                    </div>
+                </div>
+            </div> 
+            <!-- step1 -->
+            <div id="product">
+                <div class="mb-5 d-flex justify-content-center">
+                    <select onchange="update_product();" class="form-select select_menu p-3" id="product_options" aria-label="Default select example">
+                        <option>Choose a product</option>
+                        <option value="Middle East Banking Channel">Middle East Banking Channel</option>
+                        <option value="GCC Financial News">GCC Financial News</option>
+                    </select>
+                </div>
+                <p class="text-center selcted_option_text" id="option_text_product"></p>
+
+                <div class="d-flex justify-content-center next_btn_div">
+                    <button type="button" id="next-1" class="button_next">Next <i class="bi bi-arrow-right p-1"></i></button>
+                </div>
+            </div>
+            <!-- step 2 -->
+            <div class="hide_selectmenu" id="freq">
+                <div class="mb-5 d-flex justify-content-center">
+                    <select  class="form-select select_menu p-3" id="freq_options" aria-label="Default select example">
+                        <option selected>Choose frequency</option>
+                        <option value="Once a day">Middle East Banking Channel                     </option>
+                        <option value="Once a week">GCC Financial News</option>
+                    </select>
+                </div>
+                <p class="text-center selcted_option_text" id="option_text_freq"></p>
+                <div class="d-flex justify-content-center next_btn_div">
+                    <button type="button" id="next-2" class="button_next">Next <i class="bi bi-arrow-right p-1"></i></button>
+                </div>
+            </div>
+            <!-- step 3 -->
+            <div id="subscribe" class="hide_selectmenu">
+                <div class="mb-5 d-flex justify-content-center">
+                   <input placeholder="Enter email and start free trial" type="email" class="subscribe_email">
+                </div>
+
+                <div class="d-flex justify-content-center next_btn_div">
+                    <button type="button" id="subscribe_btn" class="button_subscribe">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+.
+    <!-- Middle text serction starts-->
+    <section id="middle_text_area">
+        <div class="container">
+            <div class="container mid_texts">
+                <p class="mb-2 para"><span class="bold_text">News articles are</span> the main source of credible information, constantly offering new opportunities and highlighting risks. Without industry news and market information, businesses can become irrelevant: news about clients, competitors, a technology breakthrough, a new law or regulation, etc.</p>
+                <p class="mb-2 para"><span class="bold_text">But with thousands of articles</span> published every day, how can professionals keep up? How can they be sure not to miss out on important events, opportunities and risks? </p>
+                <p class="mb-2 para"><span class="bold_text">Whether you are</span> in Banking, Financial Markets, Technology, Real Estate, Education, or any other sector, professionals need information every day. </p>
+            </div>
+
+            <div class="container-xs service_desc ">
+                <p class="text-center service_desc_title">All you need is to check one single email a day</p>
+                <p class="text-center service_desc_subtitle">We go through thousands of articles to send you what is truly relevant to your business. The news that you <span class="fw-bold">DON’T WANT </span>to miss</p>
+                <div class="d-flex justify-content-center pt-5">
+                     <img class="img-fluid" src="/images/image_1.png" alt="image">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Middle text serction ends-->
+
+
+    <!-- Banner Section starts -->
+
+        <section class="banner" id="banner">
+            <svg class="svg_wheel" width="185" height="268" viewBox="0 0 185 268" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.15" fill-rule="evenodd" clip-rule="evenodd" d="M94.2048 252.676C164.321 218.807 201.182 138.25 176.537 72.7469C151.892 7.24331 75.0725 -18.4021 4.95645 15.4663C-65.1596 49.3346 -102.021 129.891 -77.3757 195.395C-52.7304 260.899 24.0888 286.544 94.2048 252.676ZM76.0246 204.355C34.4744 224.425 -11.0481 209.228 -25.6527 170.411C-40.2573 131.594 -18.4136 83.8568 23.1367 63.7867C64.6869 43.7166 110.209 58.9138 124.814 97.7308C139.419 136.548 117.575 184.285 76.0246 204.355Z" fill="url(#paint0_linear_314_191)"/>
+                <defs>
+                <linearGradient id="paint0_linear_314_191" x1="-32.8704" y1="313.684" x2="229.278" y2="215.052" gradientUnits="userSpaceOnUse">
+                <stop stop-color="white" stop-opacity="0.01"/>
+                <stop offset="1" stop-color="white"/>
+                </linearGradient>
+                </defs>
+            </svg>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class=" text-center bold_banner_numbers">
+                            25000 <br>
+                            <span class="less_bold">
+                                Joined <br>
+                                Professionals
+                            </span>
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="text-center bold_banner_numbers">
+                            3000 <br>
+                            <span class="less_bold">
+                                Scanned <br>
+                                Articles a day
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Banner Section ends -->
+
+
+    <!-- How it works section starts-->
+        <section class="how_it_works position-relative" id="how_it_works">
+            <div class="container">
+                <p class="text-center title">
+                    How it works
+                </p>
+                <svg class="how_it_works_wheel_svg position-absolute" width="238" height="509" viewBox="0 0 238 509" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.15" fill-rule="evenodd" clip-rule="evenodd" d="M288.183 500.936C422.043 467.096 511.717 329.332 488.475 193.232C465.233 57.1306 337.877 -25.7687 204.016 8.07066C70.1562 41.91 -19.5175 179.674 3.72451 315.775C26.9666 451.876 154.323 534.775 288.183 500.936ZM271.038 400.537C191.714 420.59 116.243 371.465 102.47 290.812C88.697 210.16 141.837 128.522 221.161 108.469C300.486 88.4161 375.957 137.542 389.73 218.194C403.503 298.846 350.363 380.484 271.038 400.537Z" fill="url(#paint0_linear_427_1107)"/>
+                    <defs>
+                    <linearGradient id="paint0_linear_427_1107" x1="45.6958" y1="561.55" x2="535.734" y2="477.866" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#005EA1" stop-opacity="0.01"/>
+                    <stop offset="1" stop-color="white"/>
+                    </linearGradient>
+                    </defs>
+                    </svg>
+                    
+                    <div class="d-flex justify-content-center paths">
+                        <div class="d-flex position-relative text-center align-items-center path">
+                            <div class='orange_ball'></div>
+                            <div class="orange_bar position-absolute"></div>
+                            <p>Enter your <br> email</p>
+                        </div>
+                        <div class="d-flex position-relative text-center align-items-center path ">
+                            <div class='orange_ball'></div>
+                            <div class="orange_bar position-absolute"></div>
+                            <p>Select <br> channel</p>
+                        </div>
+                        <div class="d-flex position-relative text-center align-items-center path">
+                            <div class='orange_ball'></div>
+                            <div class="orange_bar position-absolute"></div>
+                            <p>Verify your <br> email</p>
+                        </div>
+                        <div class="d-flex position-relative text-center align-items-center path">
+                            <div class='orange_ball'></div>
+                            <div class="orange_bar position-absolute"></div>
+                            <p>Start trial</p>
+                        </div>
+                    </div>
+
+                <!-- step1 -->
+            <div id="product_2.0">
+                <div class="mb-5 d-flex justify-content-center">
+                    <select onchange="update_product_2();" class="form-select select_menu p-3" id="product_options_2.0" aria-label="Default select example">
+                        <option>Choose a product</option>
+                        <option value="Middle East Banking Channel">Middle East Banking Channel</option>
+                        <option value="GCC Financial News">GCC Financial News</option>
+                    </select>
+                </div>
+                <p class="text-center selcted_option_text" id="option_text_product_2.0"></p>
+
+                <div class="d-flex justify-content-center next_btn_div">
+                    <button type="button" id="next-1-2.0" class="button_next">Next <i class="bi bi-arrow-right p-1"></i></button>
+                </div>
+            </div>
+            <!-- step 2 -->
+            <div class="hide_selectmenu" id="freq_2.0">
+                <div class="mb-5 d-flex justify-content-center">
+                    <select  class="form-select select_menu p-3" id="freq_options_2.0" aria-label="Default select example">
+                        <option selected>Choose frequency</option>
+                        <option value="Once a day">Middle East Banking Channel                     </option>
+                        <option value="Once a week">GCC Financial News</option>
+                    </select>
+                </div>
+                <p class="text-center selcted_option_text" id="option_text_freq_2.0"></p>
+                <div class="d-flex justify-content-center next_btn_div">
+                    <button type="button" id="next-2-2.0" class="button_next">Next <i class="bi bi-arrow-right p-1"></i></button>
+                </div>
+            </div>
+            <!-- step 3 -->
+
+            <div id="subscribe_2.0" class="hide_selectmenu">
+                <div class="mb-5 d-flex justify-content-center">
+                   <input placeholder="Enter email and start free trial" type="email" class="subscribe_email">
+                </div>
+
+                <div class="d-flex justify-content-center next_btn_div">
+                    <button type="button" id="subscribe_btn_2.0" class="button_subscribe">Subscribe</button>
+                </div>
+            </div>
+
+                <!-- carousel section starts-->
+                <div id="carouselExampleControls" class="carousel slide d-flex justify-content-center mt-5" data-bs-ride="carousel">
+                    
+                    <div class="carousel-inner carousel-inner-custom">
+                      <div class="carousel-item active ">
+                        <p>“Always wondered if there was a service that just sends me all news relevant to my business, so that I can focus on taking action where needed. Well, now there is.”</p>
+                        <br>
+                        <p class="title_carousel">CEO of a UAE Bank.</p>
+                      </div>
+                      <div class="carousel-item ">
+                        <p>“You have replaced five other newsletters I used to receive. Thank you for giving me back my time while making sure I do not miss opportunities.” </p>
+                        <br>
+                        <p class="title_carousel">Head of Strategy at a multinational.</p>
+                      </div>
+                      <div class="carousel-item ">
+                        <p>“Congrats for WriteCaliber – I found it truly useful”</p>
+                        <br>
+                        <br>
+                        <p class="title_carousel">MD of Consulting firm.</p>
+                      </div>
+                      <div class="carousel-item ">
+                        <p>“Would like to read more about Environmental and Sustainability initiatives” </p>
+                        <br>
+                        <br>
+                        <p class="title_carousel"> ESG Consultant.</p>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <div class="carousel_buttons">
+                    <button class="carousel-control-prev carousel-control-prev-custom" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                        <i class="bi bi-chevron-left  carousel_slider text-dark"></i>
+                    </button>
+                    <button class="carousel-control-next carousel-control-next-custom" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                        <i class="bi bi-chevron-right carousel_slider text-dark"></i>
+                    </button>
+                </div>
+                <!-- carousel section ends-->
+
+            </div>
+        </section>
+    <!-- How it works section ends-->
+
+
+    <!-- FAQ Section starts -->
+            <section class="faq position-relative" id="faq">
+                <svg class="position-absolute top-0 faq_svg" width="315" height="536" viewBox="0 0 315 536" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M221.877 65.1446C109.843 -31.4375 -59.2734 -18.9113 -155.855 93.1225C-252.438 205.156 -239.912 374.273 -127.878 470.855C-15.8439 567.437 153.273 554.911 249.855 442.877C346.437 330.843 333.911 161.727 221.877 65.1446Z" fill="url(#paint0_linear_427_861)" fill-opacity="0.1"/>
+                    <defs>
+                    <linearGradient id="paint0_linear_427_861" x1="-127.878" y1="470.855" x2="221.877" y2="65.1447" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#005EA1"/>
+                    <stop offset="1" stop-color="#005EA1" stop-opacity="0"/>
+                    </linearGradient>
+                    </defs>
+                </svg>
+                    
+                <div class="container">
+                    <p class="text-center title">FAQs</p>
+                    <div class="row">
+                    <div class="col-md-8">
+                        <div class="faq_question_and_answer">
+                            <p class="question">
+                                How does WriteCaliber help me?
+                            </p>
+                            <p class="answer">
+                                Professionals need to stay informed: follow their industry trends, listen to what their customers communicate, watch their competitors, monitor government regulations, suppliers, etc… And when these professionals are part of a big industry or look after a wide region like the GCC, it becomes almost impossible to stay truly updated, and they are bound to miss some opportunities or worse, miss identifying some risks. This is where WriteCaliber comes in. A truly personalized news experience keeping professionals informed in just few minutes a day. You can choose from a selection of existing channels, or simply request your own bespoke channel.
+                                The topics we cover range from a comprehensive industry update (e.g. real estate in the GCC, Healthcare news in Saudi, etc.) to more specific topics (fintech funding in UAE, Innovation in the Oil & Gas industry, etc.).
+                            </p>
+                        </div>
+                        <div class="faq_question_and_answer">
+                            <p class="question">
+                                What do you mean by a Channel?
+                            </p>
+                            <p class="answer">
+                                A channel is a collection of news, regularly updated, and carefully picked to follow a specific topic, sector, market, or any combination of those. Noise-free and comprehensive news channels.
+                            </p>
+                        </div>
+
+                        <div class="faq_question_and_answer">
+                            <p class="question">
+                                How can I receive the updates?
+                            </p>
+                            <p class="answer">
+                                You only need to read on daily email. Other delivery methods will be introduced soon.
+                            </p>
+                        </div>
+
+                        <div class="faq_question_and_answer">
+                            <p class="question">
+                                How many articles and sources do you scan?
+                            </p>
+                            <p class="answer">
+                            
+                                For the current Middle East channels, we are currently aggregating from over 120 sources and scanning over 3000 articles a day. And that number is increasing every day. However, our technology allows us to scan any source in the world in any market. We only need to configure our system to match what you are looking for.
+                                
+                            </p>
+                        </div>
+
+                        <div class="faq_question_and_answer">
+                            <p class="question">
+                                Does that mean I don’t need to pay for any other news subscriptions anymore?
+                            </p>
+                            <p class="answer">
+                                Our goal is to identify and show you the articles that you need to be aware of. When you click to read, you will be directed to the source. If the source requires a subscription, then you will need to arrange for that. We always attribute the content to its rightful owner.
+                                
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="/images/faq.png" alt="">
+                    </div>
+                </div>
+                </div>
+            </section>
+    <!-- FAQ Section Ends -->
+
+
+    <!-- Footer -->
+
+    <footer class="footer">
+        <p class="text-center">
+            © 2021 WriteCaliber Technologies FZ LLC. All rights Reserved
+        </p>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        let faq = document.getElementsByClassName("question");
+        for (i = 0; i < faq.length; i++) {
+        faq[i].addEventListener("click", function () {
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("show");
+        /* Toggle between hiding and showing the active panel */
+        var body = this.nextElementSibling;
+        if (body.style.display === "block") {
+            body.style.display = "none";
+        } else {
+            body.style.display = "block";
+        }
+    });
+
+
+    // First form
+
+    let next_btn1 = document.getElementById('next-1');
+    let next_btn2 = document.getElementById('next-2');
+    let porduct_option = document.getElementById('product');
+    let freq_option = document.getElementById('freq');
+    let subscribe = document.getElementById('subscribe');
+
+    let freq_selection = document.getElementById("frequency_options");
+    let option_text_product = document.getElementById('option_text_product');
+
+    next_btn1.addEventListener("click", function(){
+        porduct_option.classList.add("hide_selectmenu");
+        freq_option.classList.remove("hide_selectmenu")
+        freq_option.classList.add("show_selectmenu")
+    });
+
+    next_btn2.addEventListener("click", function(){
+        freq_option.classList.remove("show_selectmenu")
+        freq_option.classList.add("hide_selectmenu")
+        subscribe.classList.remove("hide_selectmenu")
+        subscribe.classList.add("show_selectmenu")
+    });
+
+    const middle_east = "A full coverage of the banking sector in the Middle East. Receive all the latest news and analysis about banks, banking technology, latest financing deals, central bank regulations, fintech and regtech innovation, etc…";
+    const gcc = "A full coverage of all listed companies in the GCC region. Track your portfolio companies and make sure to stay up to date with their news, analysis, interviews, products launches, wins, of every listed company in all GCC exchanges."
+    function update_product(){
+            var product_selection = document.getElementById('product_options');
+            var product = product_selection.options[product_selection.selectedIndex].value;
+            console.log(product);
+            if(product == "GCC Financial News"){
+                option_text_product.innerHTML= gcc;
+            } else if(product == "Middle East Banking Channel"){
+                option_text_product.innerHTML= middle_east;
+            } else{
+                option_text_product.innerHTML = ""
+            }
+            console.log(product);
+
+    }
+
+
+    // 2nd form 
+
+    let next_btn1_2 = document.getElementById('next-1-2.0');
+    let next_btn2_2 = document.getElementById('next-2-2.0');
+    let porduct_option_2 = document.getElementById('product_2.0');
+    let freq_option_2 = document.getElementById('freq_2.0');
+    let subscribe_2 = document.getElementById('subscribe_2.0');
+
+    let freq_selection_2 = document.getElementById("frequency_options_2.0");
+    let option_text_product_2 = document.getElementById('option_text_product_2.0');
+
+    next_btn1_2.addEventListener("click", function(){
+        console.log("clicked");
+        porduct_option_2.classList.add("hide_selectmenu");
+        freq_option_2.classList.remove("hide_selectmenu")
+        freq_option_2.classList.add("show_selectmenu")
+    });
+
+    next_btn2_2.addEventListener("click", function(){
+        freq_option_2.classList.remove("show_selectmenu")
+        freq_option_2.classList.add("hide_selectmenu")
+        subscribe_2.classList.remove("hide_selectmenu")
+        subscribe_2.classList.add("show_selectmenu")
+    });
+
+    function update_product_2(){
+            var product_selection = document.getElementById('product_options_2.0');
+            var product = product_selection.options[product_selection.selectedIndex].value;
+            console.log(product);
+            if(product == "GCC Financial News"){
+                option_text_product_2.innerHTML= gcc;
+            } else if(product == "Middle East Banking Channel"){
+                option_text_product_2.innerHTML= middle_east;
+            }
+            console.log(product);
+
+    }
+
+    const update_freq = () =>{
+            var freq_selection = document.getElementById('freq_options');
+            var freq = freq_selection.options[freq_selection.selectedIndex].value;
+            console.log(freq);
+
+    }
+
+
+    // subscribe.addEventListener("click", function(){
+
+    // })
+}
+    </script>
+</body>
+</html>
